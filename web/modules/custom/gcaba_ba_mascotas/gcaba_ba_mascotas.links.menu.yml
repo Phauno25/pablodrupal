@@ -1,0 +1,6 @@
+gcaba_ba_mascotas.config:
+  title: 'BA Mascotas'
+  description: 'Configuracion del modulo BA mascotas.'
+  route_name: gcaba_ba_mascotas.config
+  parent: 'system.admin_config_development'
+  menu_name: gcaba

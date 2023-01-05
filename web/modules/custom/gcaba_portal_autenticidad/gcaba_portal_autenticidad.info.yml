@@ -1,0 +1,6 @@
+name: Portal Autenticidad
+type: module
+description: 'Modulo que consulta a un servicio de GEDO para validar la veracidad de documentos eléctronicos.'
+package: Gcaba 
+version: 1.0
+core_version_requirement: ^8 || ^9

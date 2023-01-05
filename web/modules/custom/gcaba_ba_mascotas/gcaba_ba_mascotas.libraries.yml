@@ -1,0 +1,9 @@
+gcaba_ba_mascotas:
+  version: 1.x
+  css:
+    theme:
+      css/gcaba_ba_mascotas.css: {}
+  js:
+    js/gcaba_ba_mascotas.js: {}
+  dependencies:
+    - core/jquery

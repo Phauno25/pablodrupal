@@ -1,0 +1,15 @@
+pablo_modulo.welcome:
+  path: '/pablo_modulo/page'
+  defaults:
+    _controller: '\Drupal\pablo_modulo\Controller\WelcomeController::welcome'
+    _title: 'Bienvenido al modulo de PAblo de drupal 9'
+  requirements: 
+    _permission: 'access content'
+
+pablo_modulo.config:
+  path: '/admin/config/pablo_modulo'
+  defaults:
+    _form: '\Drupal\pablo_modulo\Form\ConfigForm'
+    _tittle: 'Configuracion Modulo Pablo'
+  requirements: 
+    _permission: 'access content'

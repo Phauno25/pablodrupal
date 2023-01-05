@@ -1,0 +1,13 @@
+<?php 
+
+function gcaba_ba_mascotas_theme($existing, $type,$theme,$path)
+{
+    return [
+        'mascotastema' => [
+            'variables' =>  ['mascotas' => null]]
+        ];
+}
+
+
+
+?>

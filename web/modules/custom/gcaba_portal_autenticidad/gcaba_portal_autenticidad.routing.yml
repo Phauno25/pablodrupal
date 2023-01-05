@@ -1,0 +1,30 @@
+gcaba_portal_autenticidad.form:
+  path: '/portal_autenticidad'
+  defaults:
+    _form: '\Drupal\gcaba_portal_autenticidad\Form\FormAutenticidad'
+    _title: 'Portal Autenticidad'
+  requirements: 
+    _permission: 'access content'
+
+gcaba_portal_autenticidad.index:
+  path: '/portal_autenticidad/index'
+  defaults:
+    _controller: '\Drupal\gcaba_portal_autenticidad\Controller\PortalAutenticidadController::index'
+    _title: 'Portal Autenticidad'
+  requirements: 
+    _permission: 'access content'
+
+gcaba_portal_autenticidad.getDocumento:
+  path: '/portal_autenticidad/getdocumentopdf'
+  defaults:
+    _controller: '\Drupal\gcaba_portal_autenticidad\Controller\PortalAutenticidadController::getDocumentoPdf'
+  requirements: 
+    _permission: 'access content'
+
+gcaba_portal_autenticidad.config:
+  path: '/admin/config/portal_autenticidad'
+  defaults:
+    _form: '\Drupal\gcaba_portal_autenticidad\Form\FormConfig'
+    _title: 'Configuracion Modulo BA Mascotas'
+  requirements: 
+    _permission: 'access content'

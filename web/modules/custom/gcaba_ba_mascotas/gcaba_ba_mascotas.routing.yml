@@ -1,0 +1,15 @@
+gcaba_ba_mascotas.index:
+  path: '/ba_mascotas'
+  defaults:
+    _controller: '\Drupal\gcaba_ba_mascotas\Controller\BAMascotasController::index'
+    _title: 'Mascotas de la ciudad'
+  requirements: 
+    _permission: 'access content'
+
+gcaba_ba_mascotas.config:
+  path: '/admin/config/ba_mascotas'
+  defaults:
+    _form: '\Drupal\gcaba_ba_mascotas\Form\FormConfig'
+    _title: 'Configuracion Modulo BA Mascotas'
+  requirements: 
+    _permission: 'access content'

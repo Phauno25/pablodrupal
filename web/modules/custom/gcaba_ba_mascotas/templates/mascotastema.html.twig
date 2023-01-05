@@ -1,0 +1,112 @@
+{{ attach_library('gcaba_ba_mascotas/gcaba_ba_mascotas') }}
+<div>
+	Header
+</div>
+
+<div>
+	BOdy
+	{{mascotas['mascotas'][0]['name']}}
+	El total de mascotas encontradas es de
+	{{mascotas['total']}}
+	<form class="ctools-auto-submit-full-form mt-2 mb-2" action="" method="get" id="formMascotas" accept-charset="UTF-8">
+        <div>
+            <div class="filtroCiviles row">
+                <div id="edit-field-poblacion-ocb-value-wrapper" class="col-md-3 col-sm-6 col-xs-12 estiloSelect mb-1"><label for="edit-field-poblacion-ocb-value">Tipo de Animal</label>
+                    <div class="views-widget">
+                        <div>
+                            <select class="form-control form-select" id="tipoMascota" name="tipoMascota">
+                                <option value="All" selected="selected">- Todos - </option>
+                                <option value="hola">hola</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Perro">Perro</option>
+								 <option value="Caniche">Caniche</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="edit-field-area-tematica-ocb-value-wrapper" class="col-md-3 col-sm-6 col-xs-12 estiloSelect mb-1"><label for="edit-field-area-tematica-ocb-value">Raza</label>
+                    <div class="views-widget">
+                        <div><select class="form-control form-select" id="razaMascota" name="razaMascota">
+                                <option value="All" selected="selected">- Todas - </option>
+                            </select></div>
+                    </div>
+                </div>
+                <div id="edit-field-barrio-ocb-value-wrapper" class="col-md-3 col-sm-6 col-xs-12 estiloSelect mb-1"><label for="edit-field-barrio-ocb-value">Sexo</label>
+                    <div class="views-widget">
+                        <div><select class="form-control form-select" id="sexoMascota" name="sexoMascota">
+                                <option value="All" selected="selected">- Todas - </option>
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
+                            </select></div>
+                    </div>
+                </div>
+                <button class="btn btn-primary form-submit" type="submit" id="Filtrar" name="" value="Filtrar">Filtrar</button>
+            </div>
+
+
+        </div>
+    </form>
+
+	<div class="table-responsive">
+		<table id="tablaMascota" class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Fecha/th>
+					<th scope="col">Tipo de Caso</th>
+					<th scope="col">Animal</th>
+					<th scope="col">Raza</th>
+					<th scope="col">Edad</th>
+					<th scope="col">Sexo</th>
+					<th scope="col">Tamaño</th>
+					<th scope="col">Observaciones</th>
+					<th scope="col">Imagen</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for mascota in mascotas['mascotas'] %}
+					<tr>
+						<td>{{mascota.IdDAtos|e}}</td>
+						<td>{{mascota.FechaInicio|e}}</td>
+                        <td>{{mascota.TipoDeCaso|e}}</td>
+                        <td>{{mascota.TipoAnimal|e}}</td>
+                        <td>{{mascota.RazaAnimal|e}}</td>
+						<td>{{mascota.Edad|e}}</td>
+                        <td>{{mascota.SexoAnimal|e}}</td>
+                        <td>{{mascota.Tamano|e}}</td>
+                        <td>{{mascota.Observaciones|e}}</td>
+                        <td><img src={{mascota.Imagen|e}} alt={{mascota.TipoAnimal}} /> </td>
+                        <td><a class="btn btn-primary" href="https://gestioncolaborativa-hml.gcba.gob.ar/confirmacion/1667240870444">Contactar</a></td>
+					</tr>
+				{% endfor %} 
+			</tbody>
+		</table>
+		<nav aria-label="Navegador de paginas">
+			<ul class="pagination" id="paginador">
+
+				<li class="page-item">
+					<a class="page-link" href="#">Anterior</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">Siguiente</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+
+</div>
+
+<div>
+	FOoter
+</div>

@@ -1,0 +1,9 @@
+gcaba_portal_autenticidad:
+  version: 1.x
+  css:
+    theme:
+      css/gcaba_portal_autenticidad.css: {}
+  js:
+    js/gcaba_portal_autenticidad.js: {}
+  dependencies:
+    - core/jquery

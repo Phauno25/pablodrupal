@@ -1,0 +1,6 @@
+name: BA Mascotas
+type: module
+description: 'Modulo que consulta a un servicio de GC para traer el listado de mascotas perdidas.'
+package: Gcaba 
+version: 1.0
+core_version_requirement: ^8 || ^9

@@ -1,0 +1,6 @@
+name: Modulo Pablo
+type: module
+description: 'Modulo de prueba portal autenticidad.'
+package: Custom
+version: 1.0
+core_version_requirement: ^8 || ^9
